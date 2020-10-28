@@ -1,0 +1,26 @@
+--cpu Cortex-M0
+".\obj\system_m031series.o"
+".\obj\startup_m031series.o"
+".\obj\clk.o"
+".\obj\fmc.o"
+".\obj\gpio.o"
+".\obj\pdma.o"
+".\obj\retarget.o"
+".\obj\spi.o"
+".\obj\sys.o"
+".\obj\timer.o"
+".\obj\uart.o"
+".\obj\wdt.o"
+".\obj\main.o"
+".\obj\user.o"
+".\obj\profile_tab.o"
+".\obj\bonding_storage.o"
+"..\..\..\source\Rafael_BLE_M0.lib"
+".\obj\porting_misc.o"
+".\obj\porting_spi.o"
+".\obj\porting_flash.o"
+".\obj\porting_lltimer.o"
+--library_type=microlib --ro-base 0x00000000 --entry 0x00000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict
+--map --first='startup_M031Series.o(RESET)' --datacompressor=off --info=inline --entry Reset_Handler --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\lst\Rafael_BLE_M0.map" -o .\obj\Rafael_BLE_M0.axf
